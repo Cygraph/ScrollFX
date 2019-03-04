@@ -4,7 +4,7 @@ Needed scripts: jquery.js
 Globals: none
 Designer: © Michael Schwarz, CyDot
 Version: 1.0.0
-Updated: 2019-04-01
+Updated: 2019-04-04
 */
 
 

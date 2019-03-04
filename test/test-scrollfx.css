@@ -1,0 +1,30 @@
+.box {
+    width: 50%;
+    height: 400px;
+    margin: 100px 0 30px 50px;
+    border: 1px solid silver;
+}
+
+.box-1 {
+    height: 250px;
+}
+
+.box-2 {
+    height: 420px;
+}
+
+.menu {
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    height: 50px;
+    width: 50%;
+    z-index: 100;
+    background-color: darkseagreen;
+    border: 1px solid silver;
+}
+
+button {
+    margin: 0;
+    margin-right: 30px;
+}

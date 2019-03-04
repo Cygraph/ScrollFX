@@ -1,6 +1,6 @@
 /*
 Plugin: scrollfx.js
-Needed scripts: jquery.js
+Dependencies: jquery.js
 Globals: none
 Designer: © Michael Schwarz, CyDot
 Version: 1.0.0
@@ -70,6 +70,10 @@ Updated: 2019-04-04
         }
     };
     
+    // Registers all elements with data-scrollfx attribute
+    // Replaces data string with data object
+    // Adds class name "scrollfx"
+    
     scrollfx.register = function () {
         var $elems = $( "[data-scrollfx]" );
         $elems.each( register );
@@ -77,8 +81,10 @@ Updated: 2019-04-04
         return $elems;
     };
     
+    // Sets or returns scrollfx trigger data
     // @params: 
-    // trigger: selector or element with a data-scrollfx attribute
+    // trigger: selector of element with a data-scrollfx attribute
+    // The trigger param alone returns its data object
     // arg0_: options object or key as 2nd and value as 3rd arg
     
     scrollfx.data = function ( trigger, arg0_ ) {
@@ -168,6 +174,8 @@ Updated: 2019-04-04
         
         return sfx;
     }
+    
+    // Bound to the trigger element
     
     function register ( i ) {
         var $el = $( this ),

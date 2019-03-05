@@ -37,6 +37,8 @@ Updated: 2019-04-04
     $.scrollfx = scrollfx;
     $.fn.scrollfx = jqviewport_scrollfx;
     
+    scrollfx.version = version;
+    
     var defaults = {
         to: null,
         by: 0,
@@ -48,10 +50,8 @@ Updated: 2019-04-04
         easing: "swing",
         
         viewport: "body, html",
-        onscroll: $.noop
+        scrolled: $.noop
     };
-    
-    scrollfx.version = version;
     
     // @params: 
     // Options object 
@@ -121,7 +121,7 @@ Updated: 2019-04-04
             scrollTop: sfx.to
         }, sfx.duration, sfx.easing, function () {
             if ( ! triggered ) {
-                sfx.onscroll( sfx );
+                sfx.scrolled( sfx );
                 scrolling = false;
             };
             triggered ++;
@@ -167,7 +167,7 @@ Updated: 2019-04-04
             ? Math.abs( sfx.by / sfx.duration ) 
             : 0;
         
-        sfx.onscroll = opts.onscroll || defaults.onscroll;
+        sfx.scrolled = opts.scrolled || defaults.scrolled;
         sfx.easing = opts.easing || defaults.easing;
         sfx.trigger = opts.trigger || "";
         sfx.event = opts.event || "";
@@ -241,11 +241,11 @@ Updated: 2019-04-04
                 else opts.duration = args[ 1 ];
                 
                 if ( $.isFunction( args[ 2 ])) {
-                    opts.onscroll = args[ 2 ];
+                    opts.scrolled = args[ 2 ];
                 }
             }
             else if ( $.isFunction( args[ 1 ])) {
-                opts.onscroll = args[ 1 ];
+                opts.scrolled = args[ 1 ];
             }
         };
         return opts;

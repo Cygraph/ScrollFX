@@ -27,7 +27,7 @@ Updated: 2019-04-04
         return scroll( sfx );
     }
     
-    function def_viewport_scrollfx ( opts ) {
+    function jqviewport_scrollfx ( opts ) {
         ( opts || {}).viewport = $( $( this )[ 0 ]);
         scrollfx( opts );
         
@@ -35,7 +35,7 @@ Updated: 2019-04-04
     }
     
     $.scrollfx = scrollfx;
-    $.fn.scrollfx = def_viewport_scrollfx;
+    $.fn.scrollfx = jqviewport_scrollfx;
     
     var defaults = {
         to: null,

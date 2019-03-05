@@ -3,8 +3,8 @@ Plugin: scrollfx.js
 Dependencies: jquery.js
 Globals: none
 Designer: © Michael Schwarz, CyDot
-Version: 1.0.0
-Updated: 2019-04-04
+Version: 1.0.1
+Updated: 2019-04-05
 */
 
 

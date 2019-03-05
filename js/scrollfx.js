@@ -10,7 +10,7 @@ Updated: 2019-04-04
 
 ;( function ( $ ) {
     
-    var version = "1.0.0",
+    var version = "1.0.1",
     $win = $( window ),
     winPorts = [ "html", "window", "body", window ];
     
@@ -169,8 +169,9 @@ Updated: 2019-04-04
         
         sfx.scrolled = opts.scrolled || defaults.scrolled;
         sfx.easing = opts.easing || defaults.easing;
-        sfx.trigger = opts.trigger || "";
-        sfx.event = opts.event || "";
+        sfx.trigger = opts.trigger ? $( opts.trigger ) : "";
+        sfx.triggerEvent = opts.event || "";
+        sfx.event = "scrolled";
         
         return sfx;
     }

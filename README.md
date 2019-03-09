@@ -1,9 +1,9 @@
 # ScrollFX
 Version 1.0.1
 
-#### ScrollFX is a jQuery based precise and configurable scroller. It allows JS and HTML notation.
+#### ScrollFX is a jQuery based precise and configurable scroller. It allows JS and HTML notation
 
-
+ScrollFX scrolls with tunable easing. It calculates the max scroll and has no scroll overhang. The scroll time can be defined by duration or speed. Any scrollable element can be scrolled. Default is window respectively html or body. A callback can be assigned.
 
 **Easy use**
 ```

@@ -20,7 +20,7 @@ $.scrollfx({ by:400, speed:4, callback:callback });
 
 ```
 
-**Scroll element** is by default "body" or "html". But you can choose any other element.
+**Scroll element** is by default "body" or "html". Most browsers accept "body" as scroll port. Firefox only accepts "html". ScrollFX takes care of that. You can choose any other element as scroll port.
 ```
 $( "#scrollEl" ).scrollfx( ".targetEl" );
 

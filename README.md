@@ -9,6 +9,8 @@ Version 1.0.1
 ```
 $.scrollfx( ".targetEl" );
 
+$.scrollfx( ".targetEl", callback );
+
 $.scrollfx( ".targetEl", 240, callback );
 
 $.scrollfx({ to:"#TargetEl", speed:4, callback:callback, offset:40 });
@@ -26,7 +28,7 @@ $.scrollfx({ by:400, speed:4, callback:callback });
 
 
 ```
-**JS registration** finds elements with data-scrollfx attribute, attaches the event, 
+**JS registration** Finds elements with data-scrollfx attribute, attaches the event, 
 stores the resulting object in the data-scrollfx attribute and adds the class name "scrollfx".
 ```
 $.scrollfx.register();

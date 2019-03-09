@@ -18,7 +18,7 @@ $.scrollfx({ by:400, speed:4, callback:callback });
 
 ```
 
-**HTML notation**
+**HTML notation** Default trigger event is "click"
 ```
 <button data-scrollfx="to:.targetEl,speed:4,offset:40">Target</button>
 

@@ -20,6 +20,23 @@ $.scrollfx({ by:400, speed:4, callback:callback });
 
 ```
 
+**Scroll element** is by default "body" or "html". But you can choose any other element.
+```
+$( "#scrollEl" ).scrollfx( ".targetEl" );
+
+
+// this results all in the same (default):
+
+$.scrollfx( ".targetEl" );
+
+$( window ).scrollfx( ".targetEl" );
+
+$( "html" ).scrollfx( ".targetEl" );
+
+$( "body" ).scrollfx( ".targetEl" );
+
+```
+
 **HTML notation** Default trigger event is "click"
 ```
 <button data-scrollfx="to:.targetEl,speed:4,offset:40">Target</button>

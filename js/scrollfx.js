@@ -4,7 +4,7 @@ Dependencies: jquery.js
 Globals: none
 Designer: © Michael Schwarz, CyDot
 Version: 0.9.2
-Updated: 2019-04-10
+Updated: 2019-03-10
 */
 
 
@@ -76,7 +76,7 @@ Updated: 2019-04-10
     
     scrollfx.register = function () {
         var $elems = $( "[data-scrollfx]" );
-        $elems.each( register );
+        $elems.each( __register );
         
         return $elems;
     };
@@ -131,6 +131,26 @@ Updated: 2019-04-10
         return sfx;
     }
     
+    // Bound to the trigger element
+    
+    function __register ( i ) {
+        var $el = $( this ),
+        opts = $el.data( "scrollfx" );
+        
+        if ( typeof opts === "string" ) {
+            opts = dataToObj( opts );
+            
+            opts.event = opts.event || "click";
+            
+            $el.data( "scrollfx", opts );
+            $el.on( opts.event, opts, $.scrollfx );
+
+            if ( ! $el.hasClass( "scrollfx" )) {
+                $el.addClass( "scrollfx" );
+            }
+        }
+    }
+    
     function setup ( arg0_ ) {
         var opts = getOptions.apply( null, arguments ),
         ports = getPorts( opts.viewport );
@@ -174,26 +194,6 @@ Updated: 2019-04-10
         sfx.event = "scrolled";
         
         return sfx;
-    }
-    
-    // Bound to the trigger element
-    
-    function register ( i ) {
-        var $el = $( this ),
-        opts = $el.data( "scrollfx" );
-        
-        if ( typeof opts === "string" ) {
-            opts = dataToObj( opts );
-            
-            opts.event = opts.event || "click";
-            
-            $el.data( "scrollfx", opts );
-            $el.on( opts.event, opts, $.scrollfx );
-
-            if ( ! $el.hasClass( "scrollfx" )) {
-                $el.addClass( "scrollfx" );
-            }
-        }
     }
     
     function getTo ( sfx, to ) {

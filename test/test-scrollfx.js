@@ -1,19 +1,19 @@
 /*
 test-breakspaces.js
 Designer: © Michael Schwarz, CyDot
-Updated: 2019-01-09
+Updated: 2019-03-10
 */
 
 
 ( function ( $ ) {
     
     var opts = {
-        to: ".box-inner-10",
+        to: ".box-inner-8",
         offset: 0,
         speed: 6,
         scrolled: scrolled,
         viewport: ".box-2"
-    }
+    };
     
     function onDoc () {
         $.scrollfx.defaults( "useSpeed", true );

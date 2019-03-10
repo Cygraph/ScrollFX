@@ -13,9 +13,9 @@ $.scrollfx( ".targetEl", callback );
 
 $.scrollfx( ".targetEl", 240, callback );
 
-$.scrollfx({ to:"#TargetEl", speed:4, callback:callback, offset:40 });
+$.scrollfx({ to:"#TargetEl", speed:4, scrolled:callback, offset:40 });
 
-$.scrollfx({ by:400, speed:4, callback:callback });
+$.scrollfx({ by:400, speed:4, scrolled:callback });
 
 
 ```

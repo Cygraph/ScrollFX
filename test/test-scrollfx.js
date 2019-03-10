@@ -19,7 +19,7 @@ Updated: 2019-01-09
         $.scrollfx.defaults( "useSpeed", true );
         $.scrollfx.register();
         
-        //$.scrollfx( opts );
+        $.scrollfx( opts );
         $( ".button-2" ).click( opts, $.scrollfx );
         
         

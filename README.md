@@ -24,6 +24,10 @@ $.scrollfx({ by:400, speed:4, callback:callback });
 ```
 $( "#scrollEl" ).scrollfx( ".targetEl" );
 
+// same as
+
+$.scrollfx({ viewport:"#scrollEl", to:".targetEl" });
+
 
 // this results all in the same (default):
 

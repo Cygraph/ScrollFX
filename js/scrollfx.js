@@ -81,7 +81,7 @@ Updated: 2019-03-10
         return $elems;
     };
     
-    // Sets or returns scrollfx trigger data
+    // Sets or returns scrollfx trigger element data
     // @params: 
     // trigger: selector of element with a data-scrollfx attribute
     // The trigger param alone returns its data object

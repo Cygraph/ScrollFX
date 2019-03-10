@@ -47,6 +47,11 @@ $( "body" ).scrollfx( ".targetEl" );
 
 <div data-scrollfx="event:mouseover,to:.targetEl,callback:myhandler">Target</div>
 
+```
+
+**JS binding** the trigger and scrollfx via javascript in jQuery style. Arguments: options and as last argument the $.scrollfx function as callback.
+```
+$( ".button" ).click({to:".targetEl", speed:5}, $.scrollfx );
 
 ```
 **JS registration** Finds elements with data-scrollfx attribute, attaches the event, 

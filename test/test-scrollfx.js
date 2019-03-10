@@ -8,10 +8,11 @@ Updated: 2019-01-09
 ( function ( $ ) {
     
     var opts = {
-        to: ".box-6",
+        to: ".box-inner-6",
         offset: 20,
         speed: 6,
-        scrolled: scrolled
+        scrolled: scrolled,
+        viewport: ".box-2"
     }
     
     function onDoc () {
@@ -21,10 +22,7 @@ Updated: 2019-01-09
         //$.scrollfx( opts );
         $( ".button-2" ).click( opts, $.scrollfx );
         
-        $.scrollfx.data( ".button-1", "scrolled", scrolled );
-        var data1 = $.scrollfx.data( ".button-1" );
         
-        console.log( "ondoc", data1 );
     }
     
     function scrolled ( sfx ) {

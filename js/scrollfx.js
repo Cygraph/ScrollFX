@@ -3,8 +3,8 @@ Plugin: scrollfx.js
 Dependencies: jquery.js
 Globals: none
 Designer: © Michael Schwarz, CyDot
-Version: 1.0.1
-Updated: 2019-04-05
+Version: 0.9.1
+Updated: 2019-04-10
 */
 
 
@@ -141,7 +141,7 @@ Updated: 2019-04-05
         sfx.viewport = ports.view;
         sfx.from = sfx.viewport.scrollTop();
         
-        sfx.max = sfx.scrollport.outerHeight() - $win.height();
+        sfx.max = sfx.scrollport[ 0 ].scrollHeight - sfx.viewport.outerHeight();
         
         sfx.to = opts.to !== undefined 
             ? getTo( sfx, opts.to )

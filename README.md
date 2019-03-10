@@ -1,5 +1,5 @@
 # ScrollFX
-Version 1.0.1
+Version 0.9.1
 
 #### ScrollFX is a jQuery based precise and configurable scroller. It allows JS and HTML notation
 

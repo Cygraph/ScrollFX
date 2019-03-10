@@ -8,7 +8,7 @@ Updated: 2019-01-09
 ( function ( $ ) {
     
     var opts = {
-        to: ".box-inner-6",
+        to: ".box-inner-10",
         offset: 0,
         speed: 6,
         scrolled: scrolled,

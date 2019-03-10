@@ -205,10 +205,9 @@ Updated: 2019-04-10
             
             if ( $trg.length ) {
                 var sTop = sfx.viewport === $win 
-                    ? 0 : sfx.scrollport.scrollTop(),
-                d = $trg.offset().top - sfx.scrollport.offset().top + sTop;
-                console.log( "getTo", sTop, d );
-                return d;
+                    ? 0 : sfx.scrollport.scrollTop();
+                
+                return $trg.offset().top - sfx.scrollport.offset().top + sTop;
             }
         };
         return sfx.from;

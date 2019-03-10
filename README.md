@@ -65,3 +65,22 @@ $( document ).ready( $.scrollfx.register );
 
 
 ```
+**ScrollFX options**
+
+**viewport**: element (selector)
+**to**: number or element
+**by**: number or element
+**offset**: number
+**duration**: number (milliseconds)
+**speed**: number (px/millisecond)
+**useSpeed**: boolean
+**easing**: string
+**event**: string
+**scrolled**: function (callback)
+
+**ScrollFX methods**
+
+**$.scrollfx.defaults( args... )**
+**$.scrollfx.register()**
+**$.scrollfx.data( triggerEl, args.. )**
+

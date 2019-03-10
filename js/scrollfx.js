@@ -202,9 +202,13 @@ Updated: 2019-04-10
         }
         else if ( isElement( to )) {
             var $trg = sfx.scrollport.find( to );
-
+            
             if ( $trg.length ) {
-                return $trg.offset().top - sfx.scrollport.offset().top;
+                var sTop = sfx.viewport === $win 
+                    ? 0 : sfx.scrollport.scrollTop(),
+                d = $trg.offset().top - sfx.scrollport.offset().top + sTop;
+                console.log( "getTo", sTop, d );
+                return d;
             }
         };
         return sfx.from;

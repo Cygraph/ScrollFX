@@ -9,7 +9,7 @@ Updated: 2019-01-09
     
     var opts = {
         to: ".box-inner-6",
-        offset: 20,
+        offset: 0,
         speed: 6,
         scrolled: scrolled,
         viewport: ".box-2"

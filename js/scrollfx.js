@@ -194,17 +194,8 @@ Updated: 2019-03-12
             sfx.scrolled = cb;
         }
         else if ( typeof cb === "string" && cb.length ) {
-            try {
-                throw eval( cb );
-            }
-            catch ( e ) {
-                if ( typeof e === "function" ) {
-                    sfx.scrolled = eval( cb );
-                }
-                else if ( console ) {
-                    console.warn( "ScrollFX: value of scrolled is not a function", opts.trigger || "" );
-                }
-            }
+            var fn = evaluateData( cb );
+            if ( fn ) sfx.scrolled = fn;
         };
         
         sfx.easing = opts.easing || defaults.easing;
@@ -213,6 +204,21 @@ Updated: 2019-03-12
         sfx.event = "scrolled";
         
         return sfx;
+    }
+    
+    function evaluateData ( data ) {
+        try {
+            throw eval( data );
+        }
+        catch ( e ) {
+            if ( typeof e === "function" ) {
+                return eval( data );
+            }
+            else if ( console ) {
+                console.warn( "ScrollFX: callback is not a function", data );
+            }
+            return undefined;
+        }
     }
     
     function getTo ( sfx, to ) {

@@ -45,7 +45,7 @@ $( "body" ).scrollfx( ".targetEl" );
 ```
 <button data-scrollfx="to:.targetEl,speed:4,offset:40">Target</button>
 
-<div data-scrollfx="event:mouseover,to:.targetEl,callback:myhandler">Target</div>
+<div data-scrollfx="event:mouseover,to:.targetEl,scrolled:callback">Target</div>
 
 ```
 

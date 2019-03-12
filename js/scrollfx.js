@@ -3,8 +3,8 @@ Plugin: scrollfx.js
 Dependencies: jquery.js
 Globals: none
 Designer: © Michael Schwarz, CyDot
-Version: 0.9.2
-Updated: 2019-03-10
+Version: 0.9.3
+Updated: 2019-03-12
 */
 
 
@@ -187,7 +187,26 @@ Updated: 2019-03-10
             ? Math.abs( sfx.by / sfx.duration ) 
             : 0;
         
-        sfx.scrolled = opts.scrolled || defaults.scrolled;
+        var cb = opts.scrolled;
+        sfx.scrolled = defaults.scrolled;
+        
+        if ( typeof cb === "function" ) {
+            sfx.scrolled = cb;
+        }
+        else if ( typeof cb === "string" && cb.length ) {
+            try {
+                throw eval( cb );
+            }
+            catch ( e ) {
+                if ( typeof e === "function" ) {
+                    sfx.scrolled = eval( cb );
+                }
+                else if ( console ) {
+                    console.warn( "ScrollFX: value of scrolled is not a function", opts.trigger || "" );
+                }
+            }
+        };
+        
         sfx.easing = opts.easing || defaults.easing;
         sfx.trigger = opts.trigger ? $( opts.trigger ) : "";
         sfx.triggerEvent = opts.event || "";

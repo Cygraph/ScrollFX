@@ -7,6 +7,10 @@ Updated: 2019-03-10
 
 ( function ( $ ) {
     
+    $.test = function ( e ) {
+        console.log( "test", e );
+    }
+    
     var opts = {
         to: ".box-inner-8",
         offset: 0,

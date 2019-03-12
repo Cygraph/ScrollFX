@@ -10,7 +10,7 @@ Updated: 2019-03-12
 
 ;( function ( $ ) {
     
-    var version = "0.9.2",
+    var version = "0.9.3",
     $win = $( window ),
     winPorts = [ "html", "window", "body", window ];
     

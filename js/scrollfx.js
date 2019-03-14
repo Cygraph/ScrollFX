@@ -53,7 +53,7 @@ Updated: 2019-03-12
         // Further it provjdes "linear"
         // If you want more easings, just notate the "jquery-ui-easing.js" 
         // script from the folder "libs" in your html header by a script tag.
-        // "jquery-ui-easing.js" is an extraction of 73 lines of code from 
+        // "jq-easings.js" is an extraction of 73 lines of code from 
         // the original jQ-UI-Library. So it's extremely lightweight.
         // It offers each of the following easings in the three variations "In", "Out" and "InOut"
         // Quad, Cubic, Quart, Quint, Expo, Sine, Circ, Elastic, Back and Bounce

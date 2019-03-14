@@ -84,7 +84,7 @@ $( document ).ready( $.scrollfx.register );
 - **$.scrollfx.register()**
 - **$.scrollfx.data( triggerEl, args.. )**
 
-**Easing** jQuerys default easing is: "swing". Further it provjdes "linear". If you want more easings, just notate the "jq-easings.js" from the "libs" folder in your html header via script tag. "jq-easings.js" is an extraction of 73 lines of code from the original jQ-UI-Library. So it's extremely lightweight. It offers each of the following easings in the three variations "In", "Out" and "InOut". Basic easings: Quad, Cubic, Quart, Quint, Expo, Sine, Circ, Elastic, Back and Bounce. All in all 30 additional easings :)
+**Easing** jQuerys default easing is: "swing". Further it provjdes "linear". If you want more easings, just notate the **"jq-easings.js"** from the "libs" folder in your html header via script tag. **"jq-easings.js"** is an extraction of 73 lines of code from the original jQ-UI-Library. So it's extremely lightweight. It offers each of the following easings in the three variations "In", "Out" and "InOut". Basic easings: Quad, Cubic, Quart, Quint, Expo, Sine, Circ, Elastic, Back and Bounce. All in all 30 additional easings :)
 ```
 $.scrollfx({ to:"#TargetEl", speed:4, easing:"easeInOutQuad", scrolled:callback });
 

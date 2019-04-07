@@ -3,8 +3,8 @@ Plugin: scrollfx.js
 Dependencies: jquery.js
 Globals: none
 Designer: © Michael Schwarz, CyDot
-Version: 0.9.3
-Updated: 2019-03-12
+Version: 0.9.4
+Updated: 2019-04-08
 */
 
 
@@ -65,20 +65,22 @@ Updated: 2019-03-12
         scrolled: $.noop
     };
     
-    // @params: 
-    // Options object 
+    // @params:
+    // Only one argument (string) returns the default property
+    // Options object sets more params
     // Or key as first and value as second argument
-    // No arguments will return a copy of the defaults object
     
     scrollfx.defaults = function ( arg0_ ) {
-        if ( ! arguments.length ) {
-            return $.extend({}, defaults );
+        if ( typeof arg0_ === "string" ) {
+            if ( arguments.length === 1 ){
+                return defaults[ arg0_ ];
+            }
+            else {
+                defaults[ arg0_ ] = arguments [ 1 ];
+            }    
         }
-        if ( $.isPlainObject( arg0_ )) {
+        else if ( $.isPlainObject( arg0_ )) {
             $.extend( defaults, arg0_ );
-        }
-        else if ( arguments.length > 1 && typeof arg0_ === "string" ) {
-            defaults[ arg0_ ] = arguments[ 1 ];
         }
     };
     

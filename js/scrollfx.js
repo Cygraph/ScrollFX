@@ -29,7 +29,8 @@ Updated: 2019-04-08
     }
     
     function jqviewport_scrollfx ( opts ) {
-        ( opts || {}).viewport = $( $( this )[ 0 ]);
+        opts = opts || {};
+        opts.viewport = $( $( this )[ 0 ]);
         scrollfx( opts );
         
         return $( this );
@@ -63,6 +64,15 @@ Updated: 2019-04-08
         
         viewport: "body, html",
         scrolled: $.noop
+    };
+    
+    scrollfx.set = function ( trigger, opts ) {
+        var $el = $( trigger ),
+        data = $el.data( "scrollfx" );
+        
+        if ( data ) {
+            $el.data( "scrollfx", $.extend( data, opts ));
+        }
     };
     
     // @params:

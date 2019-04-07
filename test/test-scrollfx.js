@@ -10,6 +10,9 @@ Updated: 2019-03-10
     $.test = function ( e ) {
         console.log( "test", e );
     }
+    $.test2 = function ( e ) {
+        console.log( "test 2", e );
+    }
     
     var opts = {
         to: ".box-inner-8",
@@ -25,6 +28,8 @@ Updated: 2019-03-10
         
         $.scrollfx( opts );
         $( ".button-2" ).click( opts, $.scrollfx );
+        
+        $.scrollfx.set( ".button-1", { scrolled: $.test2, speed: 5 });
         
         
     }

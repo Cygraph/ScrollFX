@@ -29,7 +29,7 @@ Updated: 2019-03-10
         $.scrollfx( opts );
         $( ".button-2" ).click( opts, $.scrollfx );
         
-        $.scrollfx.set( ".button-1", { scrolled: $.test2, speed: 5 });
+        $.scrollfx.data( ".button-1", { scrolled: $.test2, speed: 5 });
         
         
     }

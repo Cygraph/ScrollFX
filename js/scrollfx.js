@@ -66,15 +66,6 @@ Updated: 2019-04-08
         scrolled: $.noop
     };
     
-    scrollfx.set = function ( trigger, opts ) {
-        var $el = $( trigger ),
-        data = $el.data( "scrollfx" );
-        
-        if ( data ) {
-            $el.data( "scrollfx", $.extend( data, opts ));
-        }
-    };
-    
     // @params:
     // Only one argument (string) returns the default property
     // Options object sets more params
@@ -119,8 +110,6 @@ Updated: 2019-04-08
             return;
         }
         opts = dataToObj( opts );
-        
-        if ( ! opts ) return;
         
         if ( arguments.length === 1 ) {
             return opts;

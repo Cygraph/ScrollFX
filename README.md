@@ -59,7 +59,7 @@ stores the resulting object in the data-scrollfx attribute and adds the class na
 ```
 $.scrollfx.register();
 
-// better
+// or
 
 $( document ).ready( $.scrollfx.register );
 

@@ -54,12 +54,11 @@ Updated: 2019-04-08
         // jQuerys default easing is: "swing"
         // Further it provjdes "linear"
         // If you want more easings, just notate the "jq-easings.js" in libs 
-        // script from the folder "libs" in your html header by a script tag.
         // "jq-easings.js" is an extraction of 73 lines of code from 
         // the original jQ-UI-Library. So it's extremely lightweight.
-        // It offers each of the following easings in the three variations "In", "Out" and "InOut"
+        // It offers each of the following easings in three variations "In", "Out" and "InOut"
         // Quad, Cubic, Quart, Quint, Expo, Sine, Circ, Elastic, Back and Bounce
-        // All in all 30 additional easings :)
+        // All in all 30 additional easings
         
         easing: "swing",
         

@@ -22,6 +22,7 @@ Updated: 2019-04-08
     // ( to, duration )
     // ( to, callback )
     // ( to )
+    // ! If defaults "useSpeed" is set true, param duration is replaced by speed
     
     function scrollfx ( arg0_ ) {
         sfx = setup.apply( null, arguments );

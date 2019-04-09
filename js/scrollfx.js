@@ -3,14 +3,14 @@ Plugin: scrollfx.js
 Dependencies: jquery.js
 Globals: none
 Designer: © Michael Schwarz, CyDot
-Version: 0.9.4
-Updated: 2019-04-08
+Version: 0.9.5
+Updated: 2019-04-09
 */
 
 
 ;( function ( $ ) {
     
-    var version = "0.9.3",
+    var version = "0.9.5",
     $win = $( window ),
     winPorts = [ "html", "window", "body", window ];
     

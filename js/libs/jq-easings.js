@@ -1,9 +1,7 @@
-/*! jQuery UI - v1.12.1 - 2019-03-11
-* http://jqueryui.com
-* Includes: effect.js
-* Copyright jQuery Foundation and other contributors; Licensed MIT */
-
-/* note: removed effects and color */
+/* Minimal easing lib
+Extraction from jQuery UI - v1.12.1
+Note: removed effects and color 
+Usage: see JQ UI api */
 
 (function( factory ) {
 	if ( typeof define === "function" && define.amd ) {

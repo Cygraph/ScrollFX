@@ -53,7 +53,7 @@ Updated: 2019-04-08
         
         // jQuerys default easing is: "swing"
         // Further it provjdes "linear"
-        // If you want more easings, just notate the "jquery-ui-easing.js" 
+        // If you want more easings, just notate the "jq-easings.js" in libs 
         // script from the folder "libs" in your html header by a script tag.
         // "jq-easings.js" is an extraction of 73 lines of code from 
         // the original jQ-UI-Library. So it's extremely lightweight.
